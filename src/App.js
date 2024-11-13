@@ -7,7 +7,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 
 function App() {
-  const [currentSection, setCurrentSection] = useState('home');
+  const [currentSection, setCurrentSection] = useState('projects');
 
   const renderSection = () => {
     switch (currentSection) {
@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div>
-      <Navbar setCurrentSection={setCurrentSection} />
+      <Navbar currentSection={currentSection} setCurrentSection={setCurrentSection} />
       {renderSection()}
     </div>
   );

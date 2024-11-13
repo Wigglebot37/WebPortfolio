@@ -1,47 +1,61 @@
 import React, {useState} from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin, FaInstagram, FaItchIo} from 'react-icons/fa'
-import { HiOutlineMail } from 'react-icons/hi'
-import { BsFillPersonLinesFill } from 'react-icons/bs'
+import { FaBars, FaTimes, FaGithub, FaLinkedin, FaInstagram, FaItchIo } from 'react-icons/fa'
+import { FiTool, FiUser, FiSend, FiArchive } from 'react-icons/fi'
 import Logo from '../assets/logo-yellow-new.png'
 import {Link} from 'react-scroll'
 
-const Navbar = () => {
-    const [nav, setNav] = useState(false)
-    const handleClick = () => setNav(!nav)
+const Navbar = ({ currentSection, setCurrentSection }) => {
+  const [hoveredSection, setHoveredSection] = useState(null);
+  const [nav, setNav] = useState(false)
+  const handleClick = () => setNav(!nav)
+  const sections = [
+    { name: 'home', icon: <FiArchive className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'Home' },
+    { name: 'about', icon: <FiUser className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'About' },
+    { name: 'projects', icon: <FiTool className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'Projects' },
+    { name: 'contact', icon: <FiSend className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'Contact' },
+  ];
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#311c35] text-white'> 
-        <div className='cursor-pointer hover:'>
-            <Link to="home" smooth={true} duration={500}>
-                <img src={Logo} alt="Logo" style={{width: '50px'}} />
-            </Link>
+    <div className='fixed w-full h-[80px] flex justify-between py-4 px-4 bg-[#311c35] text-white'> 
+        <div className='cursor-pointer hover:rotate-90 transition-transform duration-500'>
+            <img src={Logo} alt="Logo" style={{ width: '50px' }} onClick={() => setCurrentSection('home')} />
         </div>
 
         {/* Normal Menu */}
         <ul className='hidden md:flex'>
-            <li className='relative group'>
-                <Link className='inline-block px-2 py-2' to="about" smooth={true} duration={500}>
-                    About
-                </Link>
-                <span className='absolute left-1/2 transform -translate-x-1/2 bottom-0 h-[2px] bg-blue-500 w-0 group-hover:w-3/5 transition-all duration-300 ease-in-out pointer-events-none'/>
-            </li>
-            <li className='relative group'>
-                <Link className='inline-block px-2 py-2' to="skills" smooth={true} duration={500}>
-                    Skills
-                </Link>
-                <span className='absolute left-1/2 transform -translate-x-1/2 bottom-0 h-[2px] bg-blue-500 w-0 group-hover:w-3/5 transition-all duration-300 ease-in-out pointer-events-none'/>
-            </li>
-            <li className='relative group'>
-                <Link className='inline-block px-2 py-2' to="projects" smooth={true} duration={500}>
-                    Projects
-                </Link>
-                <span className='absolute left-1/2 transform -translate-x-1/2 bottom-0 h-[2px] bg-blue-500 w-0 group-hover:w-3/5 transition-all duration-300 ease-in-out pointer-events-none'/>
-            </li>
-            <li className='relative group'>
-                <Link className='inline-block px-2 py-2' to="contact" smooth={true} duration={500}>
-                    Contact
-                </Link>
-                <span className='absolute left-1/2 transform -translate-x-1/2 bottom-0 h-[2px] bg-blue-500 w-0 group-hover:w-3/5 transition-all duration-300 ease-in-out pointer-events-none'/>
-            </li>
+            {sections.map((section) => (
+                <li key={section.name} className='relative group px-[40px]'
+                onMouseEnter={() => setHoveredSection(section.name)}
+                onMouseLeave={() => setHoveredSection(null)}>
+                    {/* Top of bookmark */}
+                    <span className={`absolute left-1/2 transform -translate-x-1/2
+                        inline-block px-4 py-4 border-t-4 border-b-[22px] border-x-[1px]
+                        bg-blue-800 border-blue-800 group-hover:border-b-[65px]
+                        group-hover:border-x-[7px] transition-all duration-200 origin-top
+                        ${currentSection === section.name && hoveredSection === null ? 'border-b-[46px]' : ''}
+                        ${hoveredSection !== null ? 'border-b-[22px]' : ''}`}>
+                        {section.icon}
+                    </span>
+
+                    <span className={`w-[58px] h-[82px] absolute left-1/2 transform -translate-x-1/2
+                        inline-block px-4 py-4 border-blue-300
+                        bg-transparent border-x-4 border-t-4 group-hover:w-[70px] group-hover:h-[125px]
+                        transition-all duration-200 origin-top
+                        ${currentSection === section.name && hoveredSection === null ? 'h-[106px]' : ''}
+                        ${hoveredSection !== null ? 'h-[82px]' : ''}`}
+                        onClick={() => setCurrentSection(section.name)}/>
+
+                    <span className={`absolute left-1/2 transform rotate-180 -translate-x-1/2 -bottom-[34px] w-0 h-0 
+                        border-l-[29px] border-l-transparent
+                        border-r-[29px] border-r-transparent
+                        border-t-[18px] border-t-[#202729]
+                        group-hover:-bottom-[77px] group-hover:border-t-[23px]
+                        group-hover:border-r-[35px] group-hover:border-l-[35px]
+                        transition-all duration-200 ease-in-out pointer-events-none
+                        ${currentSection === section.name && hoveredSection === null ? '-bottom-[58px]' : ''}
+                        ${hoveredSection !== null ? '-bottom-[34px]' : ''}`}>
+                    </span>
+                </li>
+            ))}
         </ul>
 
         {/* Menu button */}
