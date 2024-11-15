@@ -1,18 +1,18 @@
 import React, {useState} from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin, FaInstagram, FaItchIo } from 'react-icons/fa'
-import { FiTool, FiUser, FiSend, FiArchive } from 'react-icons/fi'
+import { FiFolder, FiUser, FiSend, FiHome } from 'react-icons/fi'
 import Logo from '../assets/logo-yellow-new.png'
-import {Link} from 'react-scroll'
 
 const Navbar = ({ currentSection, setCurrentSection }) => {
   const [hoveredSection, setHoveredSection] = useState(null);
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
+
   const sections = [
-    { name: 'home', icon: <FiArchive className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'Home' },
-    { name: 'about', icon: <FiUser className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'About' },
-    { name: 'projects', icon: <FiTool className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'Projects' },
-    { name: 'contact', icon: <FiSend className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'Contact' },
+    { name: 'home', icon: <FiHome className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'home' },
+    { name: 'about', icon: <FiUser className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'about' },
+    { name: 'projects', icon: <FiFolder className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'projects' },
+    { name: 'contact', icon: <FiSend className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'contact' },
   ];
   return (
     <div className='fixed w-full h-[80px] flex justify-between py-4 px-4 bg-[#311c35] text-white'> 
@@ -36,12 +36,14 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
                         {section.icon}
                     </span>
 
-                    <span className={`w-[58px] h-[82px] absolute left-1/2 transform -translate-x-1/2
+                    <span className={`absolute left-1/2 transform -translate-x-1/2
                         inline-block px-4 py-4 border-blue-300
-                        bg-transparent border-x-4 border-t-4 group-hover:w-[70px] group-hover:h-[125px]
+                        bg-transparent border-x-4 border-t-4
                         transition-all duration-200 origin-top
-                        ${currentSection === section.name && hoveredSection === null ? 'h-[106px]' : ''}
-                        ${hoveredSection !== null ? 'h-[82px]' : ''}`}
+                        ${currentSection !== section.name && hoveredSection !== section.name ? 'w-[58px] h-[82px]' : ''}
+                        ${currentSection === section.name && hoveredSection === null ? 'w-[58px] h-[106px]' : ''}
+                        ${currentSection === section.name && hoveredSection !== null && hoveredSection !== section.name ? 'w-[58px] h-[82px]' : ''}
+                        ${hoveredSection === section.name ? 'w-[70px] h-[125px]' : ''}`}
                         onClick={() => setCurrentSection(section.name)}/>
 
                     <span className={`absolute left-1/2 transform rotate-180 -translate-x-1/2 -bottom-[34px] w-0 h-0 
@@ -62,35 +64,6 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
         <div onClick={handleClick} className='md:hidden z-10'>
             {!nav ? <FaBars /> : <FaTimes />}
         </div>
-
-        {/* Mobile Menu */}
-        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#202729] flex flex-col justify-center items-center'}>
-            <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="home" smooth={true} duration={500}>
-                    Home
-                </Link>
-            </li>
-            <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="about" smooth={true} duration={500}>
-                    About
-                </Link>
-            </li>
-            <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
-                    Skills
-                </Link>
-            </li>
-            <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="projects" smooth={true} duration={500}>
-                    Projects
-                </Link>
-            </li>
-            <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
-                    Contact
-                </Link>
-            </li>
-        </ul>
 
         {/* Social icons */}
         <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
