@@ -6,12 +6,12 @@ import Scorch from '../assets/scorch.png';
 
 const Projects = () => {
   return (
-    <div name='projects' className='w-full md:h-screen bg-[#202729] text-gray-300'>
+    <div name='projects' className='w-full md:h-screen bg-[#202729] text-[#AA644D]'>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='pb-8'>
-          <p className='text-4xl font-bold inline border-b-4 border-purple-300 '>Projects</p>
-          <p className='py-6'>These are the projects I've done</p>
+          <p className='text-4xl font-bold inline border-b-4 border-[#857d77] '>Projects</p>
+          <p className='text-[#d1c7a2] py-6 text-xl'>These are the projects I've done</p>
         </div>
         {/* Project Container */}
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
