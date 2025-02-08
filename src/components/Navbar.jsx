@@ -45,12 +45,12 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
                         ${currentSection === section.name && hoveredSection === null ? 'border-b-[46px]' : ''}
                         ${hoveredSection !== null && hoveredSection !== currentSection ? 'border-b-[22px]' : ''}`}
                     style={{
-                        borderColor: sectionBorderColors[section.name],
+                        borderColor: '#FFFFFF',
                         backgroundColor: sectionBorderColors[section.name],
                     }}>
                         {section.icon}
                     </span>
-
+                    {/*
                     <span className={`absolute left-1/2 transform -translate-x-1/2
                         inline-block px-4 py-4
                         bg-transparent border-x-4 border-t-4
@@ -63,6 +63,7 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
                     style={{
                         borderColor: '#FFFFFF',
                     }}/>
+                    */}
                     {/* Bottom of bookmark black overlay */}
                     <span className={`absolute left-1/2 transform rotate-180 -translate-x-1/2 -bottom-[34px] w-0 h-0 
                         border-l-[29px] border-l-transparent
