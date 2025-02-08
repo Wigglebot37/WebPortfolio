@@ -5,10 +5,10 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
   const [hoveredSection, setHoveredSection] = useState(null);
 
   const sections = [
-    { name: 'home', icon: <FiHome className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'home' },
-    { name: 'about', icon: <FiUser className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'about' },
-    { name: 'projects', icon: <FiFolder className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'projects' },
-    { name: 'contact', icon: <FiSend className={`h-6 w-6 text-white group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'contact' },
+    { name: 'home', icon: <FiHome className={`h-6 w-6 text-white sm:group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'home' },
+    { name: 'about', icon: <FiUser className={`h-6 w-6 text-white sm:group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'about' },
+    { name: 'projects', icon: <FiFolder className={`h-6 w-6 text-white sm:group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'projects' },
+    { name: 'contact', icon: <FiSend className={`h-6 w-6 text-white sm:group-hover:scale-150 transition-transform duration-200 origin-top`}/>, label: 'contact' },
   ];
 
   const sectionBorderColors = {
@@ -40,10 +40,12 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
                     {/* Top of bookmark */}
                     <span className={`absolute left-1/2 transform -translate-x-1/2
                         inline-block px-4 py-4 border-t-4 border-b-[22px] border-x-[1px]
-                        group-hover:border-b-[65px] group-hover:border-x-[7px]
+                        sm:group-hover:border-b-[65px] sm:group-hover:border-x-[7px]
+                        max-sm:group-hover:border-b-[46px]
                         sm:transition-all sm:duration-300 origin-top
                         ${currentSection === section.name && hoveredSection === null ? 'border-b-[46px]' : ''}
-                        ${hoveredSection !== null && hoveredSection !== currentSection ? 'border-b-[22px]' : ''}`}
+                        ${hoveredSection !== null && hoveredSection !== currentSection ? 'border-b-[22px]' : ''}
+                        ${hoveredSection === section.name ? 'max-sm:border-b-[46px]' : ''}`}
                     style={{
                         borderColor: sectionBorderColors[section.name],
                         backgroundColor: sectionBorderColors[section.name],
@@ -54,11 +56,11 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
                     <span className={`absolute left-1/2 transform -translate-x-1/2
                         inline-block px-4 py-4
                         bg-transparent border-x-4 border-t-4
-                        sm:transition-all sm:duration-300 origin-top max-sm:pointer-events-auto max-sm:active:w-[70px] max-sm:active:h-[125px]
+                        sm:transition-all sm:duration-300 origin-top
                         ${currentSection !== section.name && hoveredSection !== section.name ? 'w-[58px] h-[82px]' : ''}
                         ${currentSection === section.name && hoveredSection === null ? 'w-[58px] h-[106px]' : ''}
                         ${currentSection === section.name && hoveredSection !== null && hoveredSection !== section.name ? 'w-[58px] h-[82px]' : ''}
-                        ${hoveredSection === section.name ? 'w-[70px] h-[125px]' : ''}`}
+                        ${hoveredSection === section.name ? 'max-sm:w-[58px] max-sm:h-[106px] sm:w-[70px] sm:h-[125px]' : ''}`}
                         onClick={() => setCurrentSection(section.name)}
                     style={{
                         borderColor: '#FFFFFF',
@@ -68,11 +70,13 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
                         border-l-[29px] border-l-transparent
                         border-r-[29px] border-r-transparent
                         border-t-[18px] border-t-[#202729]
-                        group-hover:-bottom-[77px] group-hover:border-t-[23px]
-                        group-hover:border-r-[35px] group-hover:border-l-[35px]
+                        sm:group-hover:-bottom-[77px] sm:group-hover:border-t-[23px]
+                        sm:group-hover:border-r-[35px] sm:group-hover:border-l-[35px]
+                        max-sm:group-hover:-bottom-[58px]
                         sm:transition-all sm:duration-300 pointer-events-none
                         ${currentSection === section.name && hoveredSection === null ? '-bottom-[58px]' : ''}
-                        ${hoveredSection !== null && hoveredSection !== currentSection ? '-bottom-[34px]' : ''}`}>
+                        ${hoveredSection !== null && hoveredSection !== currentSection ? '-bottom-[34px]' : ''}
+                        ${hoveredSection === section.name ? 'max-sm:-bottom-[58px]' : ''}`}>
                     </span>
                     {/* Bottom of bookmark white overlay */}
                     <span className={`max-sm:hidden absolute left-1/2 transform rotate-180 -translate-x-1/2 -bottom-[34px] w-0 h-0 
