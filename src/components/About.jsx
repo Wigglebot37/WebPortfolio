@@ -4,13 +4,13 @@ import { FaGithub, FaLinkedin, FaInstagram, FaItchIo } from 'react-icons/fa'
 
 const About = () => {
     return (
-      <div name='about' className='w-full h-screen bg-[#202729] text-[#AA644D] flex justify-center items-center'>
+      <div name='about' className='w-full min-h-screen sm:h-screen bg-[#202729] text-[#AA644D] flex max-sm:flex-col items-center sm:justify-center max-sm:pt-[120px] max-sm:pb-8 overflow-auto'>
         <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 items-center'>
           {/* Left Text Section */}
           <div className='text-4xl font-bold sm:text-right'>
             <p className='inline border-b-4 border-[#857d77]'>About</p>
             <br/><br/>
-            <p className='text-[#d1c7a2] text-3xl'>I've been working on software projects since 2019 and enjoy learning new tools & languages.
+            <p className='text-[#d1c7a2] text-xl sm:text-3xl'>I've been working on software projects since 2019 and enjoy learning new tools & languages.
                 I am particularly good with the Gamemaker Studio 2 engine, but also like to branch out.</p>
             <br/>
             <ul className='flex justify-center sm:justify-end gap-8 mt-4'>
@@ -39,7 +39,7 @@ const About = () => {
           {/* Right Image Section */}
           <div className='flex justify-center'>
             <img src={Profile} alt="Profile"
-            className='w-[350px] border-4 border-[#857d77] rounded-lg
+            className='w-[225px] sm:w-[350px] border-4 border-[#857d77] rounded-lg
                 hover:scale-105 transition-transform duration-300'/>
           </div>
         </div>
