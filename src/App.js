@@ -32,7 +32,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="bg-[#202729] min-h-screen">
       <Navbar currentSection={currentSection} setCurrentSection={setCurrentSection} />
       {renderSection()}
     </div>
