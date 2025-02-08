@@ -54,7 +54,7 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
                     <span className={`absolute left-1/2 transform -translate-x-1/2
                         inline-block px-4 py-4
                         bg-transparent border-x-4 border-t-4
-                        sm:transition-all sm:duration-300 origin-top max-sm:pointer-events-auto
+                        sm:transition-all sm:duration-300 origin-top max-sm:pointer-events-auto max-sm:active:w-[70px] max-sm:active:h-[125px]
                         ${currentSection !== section.name && hoveredSection !== section.name ? 'w-[58px] h-[82px]' : ''}
                         ${currentSection === section.name && hoveredSection === null ? 'w-[58px] h-[106px]' : ''}
                         ${currentSection === section.name && hoveredSection !== null && hoveredSection !== section.name ? 'w-[58px] h-[82px]' : ''}
