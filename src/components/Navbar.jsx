@@ -45,7 +45,8 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
                         ${currentSection === section.name && hoveredSection === null ? 'border-b-[46px]' : ''}
                         ${hoveredSection !== null && hoveredSection !== currentSection ? 'border-b-[22px]' : ''}`}
                     style={{
-                        borderColor: '#FFFFFF',
+                        borderColor: sectionBorderColors[section.name],
+                        borderBottom: '#FFFFFF',
                         backgroundColor: sectionBorderColors[section.name],
                     }}>
                         {section.icon}
