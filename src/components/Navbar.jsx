@@ -41,21 +41,20 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
                     <span className={`absolute left-1/2 transform -translate-x-1/2
                         inline-block px-4 py-4 border-t-4 border-b-[22px] border-x-[1px]
                         group-hover:border-b-[65px] group-hover:border-x-[7px]
-                        transition-all max-sm:duration-0 sm:duration-300 origin-top
+                        sm:transition-all sm:duration-300 origin-top
                         ${currentSection === section.name && hoveredSection === null ? 'border-b-[46px]' : ''}
                         ${hoveredSection !== null && hoveredSection !== currentSection ? 'border-b-[22px]' : ''}`}
                     style={{
                         borderColor: sectionBorderColors[section.name],
-                        borderBottom: '#FFFFFF',
                         backgroundColor: sectionBorderColors[section.name],
                     }}>
                         {section.icon}
                     </span>
-                    {/*
+
                     <span className={`absolute left-1/2 transform -translate-x-1/2
                         inline-block px-4 py-4
                         bg-transparent border-x-4 border-t-4
-                        transition-all max-sm:duration-0 sm:duration-300 origin-top
+                        sm:transition-all sm:duration-300 origin-top
                         ${currentSection !== section.name && hoveredSection !== section.name ? 'w-[58px] h-[82px]' : ''}
                         ${currentSection === section.name && hoveredSection === null ? 'w-[58px] h-[106px]' : ''}
                         ${currentSection === section.name && hoveredSection !== null && hoveredSection !== section.name ? 'w-[58px] h-[82px]' : ''}
@@ -64,7 +63,6 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
                     style={{
                         borderColor: '#FFFFFF',
                     }}/>
-                    */}
                     {/* Bottom of bookmark black overlay */}
                     <span className={`absolute left-1/2 transform rotate-180 -translate-x-1/2 -bottom-[34px] w-0 h-0 
                         border-l-[29px] border-l-transparent
@@ -72,7 +70,7 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
                         border-t-[18px] border-t-[#202729]
                         group-hover:-bottom-[77px] group-hover:border-t-[23px]
                         group-hover:border-r-[35px] group-hover:border-l-[35px]
-                        transition-all max-sm:duration-0 sm:duration-300 pointer-events-none
+                        sm:transition-all sm:duration-300 pointer-events-none
                         ${currentSection === section.name && hoveredSection === null ? '-bottom-[58px]' : ''}
                         ${hoveredSection !== null && hoveredSection !== currentSection ? '-bottom-[34px]' : ''}`}>
                     </span>
