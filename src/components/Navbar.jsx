@@ -58,7 +58,7 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
                         ${currentSection !== section.name && hoveredSection !== section.name ? 'w-[58px] h-[82px]' : ''}
                         ${currentSection === section.name && hoveredSection === null ? 'w-[58px] h-[106px]' : ''}
                         ${currentSection === section.name && hoveredSection !== null && hoveredSection !== section.name ? 'w-[58px] h-[82px]' : ''}
-                        ${hoveredSection === section.name ? 'sm:w-[70px] sm:h-[125px]' : ''}`}
+                        ${hoveredSection === section.name ? 'w-[70px] h-[125px]' : ''}`}
                         onClick={() => setCurrentSection(section.name)}
                     style={{
                         borderColor: '#FFFFFF',
