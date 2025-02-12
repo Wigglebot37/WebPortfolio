@@ -36,7 +36,6 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
                 <li key={section.name} className='relative group px-[40px]'
                 onMouseEnter={() => setHoveredSection(section.name)}
                 onMouseLeave={() => setHoveredSection(null)}>
-
                     {/* Top of bookmark */}
                     <span className={`absolute left-1/2 transform -translate-x-1/2
                         inline-block px-4 py-4 border-t-4 border-b-[22px] border-x-[1px]
@@ -52,7 +51,7 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
                     }}>
                         {section.icon}
                     </span>
-
+                    {/* Top of bookmark border*/}
                     <span className={`absolute left-1/2 transform -translate-x-1/2
                         inline-block px-4 py-4
                         bg-transparent border-x-4 border-t-4
