@@ -14,12 +14,12 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
   const sectionBorderColors = {
     home: '#7A9C96', // Green
     about: '#486B7F', // Blue
-    projects: '#D1BFB0', // Grey
+    projects: '#D1BFB0', // Tan
     contact: '#BB474F', // Red
   };
 
   return (
-    <div className='fixed w-full h-[80px] max-sm:justify-center flex justify-between py-4 px-4 bg-[#392b35] text-white'> 
+    <div className='fixed w-full h-[80px] max-sm:justify-center flex justify-between py-4 px-4 bg-[#392b35] text-white z-20'> 
         {/* Bar Menu */}
         <ul className='flex'>
             {/* Fullscreen white hover background */}
