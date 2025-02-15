@@ -1,8 +1,12 @@
 import React from 'react'
-import Everett from '../assets/everett.png';
+import Wiggle from '../assets/wiggle.png';
 import Quandary from '../assets/quandary.png';
 import Precinct from '../assets/precinct.jpg';
 import Scorch from '../assets/scorch.png';
+import Substitute from '../assets/substitute.png';
+import Suction from '../assets/suction.png';
+import Website from '../assets/website.png';
+import Discord from '../assets/discord.jpg';
 
 const Projects = () => {
   return (
@@ -59,7 +63,7 @@ const Projects = () => {
           <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
             {/* Background Image (Darkened) */}
             <div 
-              style={{ backgroundImage: `url(${Everett})` }} 
+              style={{ backgroundImage: `url(${Substitute})` }} 
               className='absolute inset-0 bg-cover bg-center brightness-50'
             ></div>
             {/* Content (Remains Bright) */}
@@ -76,7 +80,7 @@ const Projects = () => {
           <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
             {/* Background Image (Darkened) */}
             <div 
-              style={{ backgroundImage: `url(${Everett})` }} 
+              style={{ backgroundImage: `url(${Wiggle})` }} 
               className='absolute inset-0 bg-cover bg-center brightness-50'
             ></div>
             {/* Content (Remains Bright) */}
@@ -96,7 +100,7 @@ const Projects = () => {
           <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
             {/* Background Image (Darkened) */}
             <div 
-              style={{ backgroundImage: `url(${Everett})` }} 
+              style={{ backgroundImage: `url(${Suction})` }} 
               className='absolute inset-0 bg-cover bg-center brightness-50'
             ></div>
             {/* Content (Remains Bright) */}
@@ -136,7 +140,7 @@ const Projects = () => {
           <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
             {/* Background Image (Darkened) */}
             <div 
-              style={{ backgroundImage: `url(${Everett})` }} 
+              style={{ backgroundImage: `url(${Discord})` }} 
               className='absolute inset-0 bg-cover bg-center brightness-50'
             ></div>
             {/* Content (Remains Bright) */}
@@ -153,7 +157,7 @@ const Projects = () => {
           <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
             {/* Background Image (Darkened) */}
             <div 
-              style={{ backgroundImage: `url(${Everett})` }} 
+              style={{ backgroundImage: `url(${Website})` }} 
               className='absolute inset-0 bg-cover bg-center brightness-50'
             ></div>
             {/* Content (Remains Bright) */}
