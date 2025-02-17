@@ -10,7 +10,7 @@ import Discord from '../assets/discord.jpg';
 
 const Projects = () => {
   return (
-    <div name='projects' className='w-full min-h-screen sm:min-h-[calc(120vh+80px)] bg-[#202729] text-[#AA644D] flex max-sm:flex-col items-center sm:justify-center max-sm:pt-[120px] max-sm:pb-8 overflow-auto'>
+    <div name='projects' className='w-full min-h-screen bg-[#202729] text-[#AA644D] flex max-sm:flex-col items-center sm:justify-center pt-[120px] max-sm:pb-8 overflow-auto'>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='pb-8'>
