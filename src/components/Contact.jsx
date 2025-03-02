@@ -18,15 +18,15 @@ const Contact = () => {
     e.preventDefault()
     setStatus('Sending...')
 
-    if (!formData.name || !formData.message) {
+    if (!formData.name || !formData.email || !formData.message) {
       setStatus("Name and message are required!");
       return; // Prevent form submission if any required field is missing
     }
   
     // Proceed if either email is empty or it has a basic structure
-    const isEmailValid = !formData.email || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
   
-    if (formData.email && !isEmailValid) {
+    if (!isEmailValid) {
       setStatus("Please enter a valid email address.");
       return; // Stop submission if email is invalid
     }
