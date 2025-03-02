@@ -17,6 +17,13 @@ const Contact = () => {
     e.preventDefault()
     setStatus('Sending...')
 
+    // Better email validation: something@domain.com
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(formData.email)) {
+      setStatus('Error: Please enter a valid email address.');
+      return;
+    }
+
     try {
       const response = await fetch('https://05r0ym5agg.execute-api.us-east-2.amazonaws.com/sendEmail', { // Lambda endpoint
         method: 'POST',
@@ -74,7 +81,7 @@ const Contact = () => {
         </button>
         {/* Display status message below the send button */}
         {status && (
-          <div className='text-white mt-4'>
+          <div className='text-white mt-4 items-center'>
             {status}
           </div>
         )}
