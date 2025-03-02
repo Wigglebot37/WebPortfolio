@@ -18,7 +18,7 @@ const Contact = () => {
     setStatus('Sending...')
 
     try {
-      const response = await fetch('https://05r0ym5agg.execute-api.us-east-2.amazonaws.com/prod/contact', {  // Replace this URL with your actual Lambda endpoint
+      const response = await fetch('https://05r0ym5agg.execute-api.us-east-2.amazonaws.com/prod/sendEmail', {  // Replace this URL with your actual Lambda endpoint
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
