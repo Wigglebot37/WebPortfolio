@@ -9,19 +9,26 @@ const Contact = () => {
   const [status, setStatus] = useState('')
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData({ ...formData, [name]: value })
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    setStatus('');
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setStatus('Sending...')
 
-    // Better email validation: something@domain.com
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(formData.email)) {
-      setStatus('Error: Please enter a valid email address.');
-      return;
+    if (!formData.name || !formData.message) {
+      setStatus("Name and message are required!");
+      return; // Prevent form submission if any required field is missing
+    }
+  
+    // Proceed if either email is empty or it has a basic structure
+    const isEmailValid = !formData.email || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
+  
+    if (formData.email && !isEmailValid) {
+      setStatus("Please enter a valid email address.");
+      return; // Stop submission if email is invalid
     }
 
     try {
