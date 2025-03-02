@@ -18,7 +18,7 @@ const Contact = () => {
     setStatus('Sending...')
 
     try {
-      const response = await fetch('https://05r0ym5agg.execute-api.us-east-2.amazonaws.com/sendEmail', {  // Replace this URL with your actual Lambda endpoint
+      const response = await fetch('https://05r0ym5agg.execute-api.us-east-2.amazonaws.com/sendEmail', { // Lambda endpoint
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -72,9 +72,13 @@ const Contact = () => {
         disabled={status === 'Sending...'}>
           Send
         </button>
+        {/* Display status message below the send button */}
+        {status && (
+          <div className='text-white mt-4'>
+            {status}
+          </div>
+        )}
       </form>
-      {status === 'Sending...' && <div>Loading...</div>}
-      <div>{status}</div>
     </div>
   )
 }
