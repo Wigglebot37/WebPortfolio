@@ -18,7 +18,7 @@ const Contact = () => {
     setStatus('Sending...')
 
     try {
-      const response = await fetch('https://05r0ym5agg.execute-api.us-east-2.amazonaws.com/', {  // Replace this URL with your actual Lambda endpoint
+      const response = await fetch('https://05r0ym5agg.execute-api.us-east-2.amazonaws.com/prod/contact', {  // Replace this URL with your actual Lambda endpoint
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -68,10 +68,12 @@ const Contact = () => {
           value={formData.message}
           onChange={handleChange}
         />
-        <button className='text-white border-2 hover:bg-[#857d77] hover:border-[#857d77] px-4 py-3 my-8 mx-auto flex items-center'>
+        <button className='text-white border-2 hover:bg-[#857d77] hover:border-[#857d77] px-4 py-3 my-8 mx-auto flex items-center'
+        disabled={status === 'Sending...'}>
           Send
         </button>
       </form>
+      {status === 'Sending...' && <div>Loading...</div>}
       <div>{status}</div>
     </div>
   )
