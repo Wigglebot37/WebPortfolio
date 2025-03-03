@@ -53,7 +53,7 @@ const Contact = () => {
 
   return (
     <div name='contact' className='w-full min-h-screen bg-[#202729] flex justify-center items-center p-4 pt-[140px] max-sm:pb-8 overflow-auto'>
-      <form onSubmit={handleSubmit} className='flex flex-col max-w-[600px] w-full'>
+      <form onSubmit={handleSubmit} className='flex flex-col max-w-[600px] w-full' noValidate>
         <div className='pb-8 text-[#AA644D]'>
           <p className='text-4xl font-bold inline border-b-4 border-[#857d77]'>Contact</p>
           <p className='text-[#d1c7a2] py-4 text-xl'>Fill out the form below or send me an email directly: andthudson@gmail.com</p>
