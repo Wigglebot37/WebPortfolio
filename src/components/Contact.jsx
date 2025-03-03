@@ -19,7 +19,7 @@ const Contact = () => {
     setStatus('Sending...')
 
     if (!formData.name || !formData.email || !formData.message) {
-      setStatus("All entries are required!");
+      setStatus("All fields are required!");
       return; // Prevent form submission if any required field is missing
     }
   
