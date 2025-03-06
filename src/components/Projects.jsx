@@ -24,7 +24,7 @@ const Projects = () => {
             {/* Background Image (Darkened) */}
             <div 
               style={{ backgroundImage: `url(${Quandary})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-50'
+              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
             <div className='relative text-center'>
@@ -44,7 +44,7 @@ const Projects = () => {
             {/* Background Image (Darkened) */}
             <div 
               style={{ backgroundImage: `url(${Precinct})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-50'
+              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
             <div className='relative text-center'>
@@ -64,7 +64,7 @@ const Projects = () => {
             {/* Background Image (Darkened) */}
             <div 
               style={{ backgroundImage: `url(${Substitute})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-50'
+              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
             <div className='relative text-center'>
@@ -81,7 +81,7 @@ const Projects = () => {
             {/* Background Image (Darkened) */}
             <div 
               style={{ backgroundImage: `url(${Wiggle})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-50'
+              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
             <div className='relative text-center'>
@@ -101,7 +101,7 @@ const Projects = () => {
             {/* Background Image (Darkened) */}
             <div 
               style={{ backgroundImage: `url(${Suction})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-50'
+              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
             <div className='relative text-center'>
@@ -121,7 +121,7 @@ const Projects = () => {
             {/* Background Image (Darkened) */}
             <div 
               style={{ backgroundImage: `url(${Scorch})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-50'
+              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
             <div className='relative text-center'>
@@ -141,7 +141,7 @@ const Projects = () => {
             {/* Background Image (Darkened) */}
             <div 
               style={{ backgroundImage: `url(${Discord})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-50'
+              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
             <div className='relative text-center'>
@@ -158,7 +158,7 @@ const Projects = () => {
             {/* Background Image (Darkened) */}
             <div 
               style={{ backgroundImage: `url(${Website})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-50'
+              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
             <div className='relative text-center'>
