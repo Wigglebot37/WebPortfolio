@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import Wiggle from '../assets/wiggle.png';
 import Quandary from '../assets/quandary.png';
 import Precinct from '../assets/precinct.jpg';
@@ -9,6 +9,10 @@ import Website from '../assets/website.png';
 import Discord from '../assets/discord.jpg';
 
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div name='projects' className='w-full min-h-screen bg-[#202729] text-[#AA644D] flex max-sm:flex-col items-center sm:justify-center pt-[120px] max-sm:pb-8 overflow-auto'>
       {/* Container */}

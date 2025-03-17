@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div name='home' className='w-full h-screen bg-[#202729]'>
         {/* Container */}

@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import Profile from '../assets/profile.jpg';
 import { FaGithub, FaLinkedin, FaInstagram, FaItchIo } from 'react-icons/fa'
 
 const About = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     return (
       <div name='about' className='w-full min-h-screen bg-[#202729] text-[#AA644D] flex max-sm:flex-col items-center sm:justify-center pt-[130px] pb-12 overflow-auto'>
         <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 items-center'>
