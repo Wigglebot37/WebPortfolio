@@ -5,6 +5,8 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
+import images from './images'
+
 function App() {
   const [currentSection, setCurrentSection] = useState('home');
   const [loadedSections, setLoadedSections] = useState({ home: true });
@@ -21,9 +23,9 @@ function App() {
       case 'home':
         return <Home />;
       case 'about':
-        return loadedSections.about ? <About /> : <LoadingScreen />;
+        return loadedSections.about ? <About images={images}/> : <LoadingScreen />;
       case 'projects':
-        return loadedSections.projects ? <Projects /> : <LoadingScreen />;
+        return loadedSections.projects ? <Projects images={images}/> : <LoadingScreen />;
       case 'contact':
         return loadedSections.contact ? <Contact /> : <LoadingScreen />;
       default:

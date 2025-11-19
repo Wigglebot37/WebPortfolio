@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
-import Profile from '../assets/profile.jpg';
+import { useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaInstagram, FaItchIo } from 'react-icons/fa'
 
-const About = () => {
+const About = ({images}) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -42,7 +41,7 @@ const About = () => {
           </div>
           {/* Right Image Section */}
           <div className='flex justify-center'>
-            <img src={Profile} alt="Profile"
+            <img src={images.Profile} alt="Profile"
             className='w-[225px] sm:w-[350px] border-4 border-[#857d77] rounded-lg
                 hover:scale-105 transition-transform duration-300'/>
           </div>

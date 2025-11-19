@@ -14,11 +14,14 @@
     }
 }
 
-html, body {
+html, body #root {
     background-color: #202729;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
   }
 
 .content-div {
@@ -26,4 +29,8 @@ html, body {
     background-size: cover;
     background-position: center;
     height: 250px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }

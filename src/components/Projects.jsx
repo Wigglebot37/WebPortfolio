@@ -1,20 +1,12 @@
-import React, { useEffect } from 'react';
-import Wiggle from '../assets/wiggle.png';
-import Quandary from '../assets/quandary.png';
-import Precinct from '../assets/precinct.jpg';
-import Scorch from '../assets/scorch.png';
-import Substitute from '../assets/substitute.png';
-import Suction from '../assets/suction.png';
-import Website from '../assets/website.png';
-import Discord from '../assets/discord.jpg';
+import { useEffect } from 'react';
 
-const Projects = () => {
+const Projects = ({images}) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div name='projects' className='w-full min-h-screen bg-[#202729] text-[#AA644D] flex max-sm:flex-col items-center sm:justify-center pt-[120px] max-sm:pb-8 overflow-auto'>
+    <div name='projects' className='w-full min-h-screen pb-24 bg-[#202729] text-[#AA644D] flex max-sm:flex-col items-center sm:justify-center pt-[120px] max-sm:pb-8 overflow-auto'>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='pb-8'>
@@ -27,7 +19,7 @@ const Projects = () => {
           <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative'>
             {/* Background Image (Darkened) */}
             <div 
-              style={{ backgroundImage: `url(${Quandary})` }} 
+              style={{ backgroundImage: `url(${images.Quandary})` }} 
               className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
@@ -47,7 +39,7 @@ const Projects = () => {
           <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
             {/* Background Image (Darkened) */}
             <div 
-              style={{ backgroundImage: `url(${Precinct})` }} 
+              style={{ backgroundImage: `url(${images.Precinct})` }} 
               className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
@@ -67,7 +59,7 @@ const Projects = () => {
           <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
             {/* Background Image (Darkened) */}
             <div 
-              style={{ backgroundImage: `url(${Substitute})` }} 
+              style={{ backgroundImage: `url(${images.Substitute})` }} 
               className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
@@ -84,7 +76,7 @@ const Projects = () => {
           <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
             {/* Background Image (Darkened) */}
             <div 
-              style={{ backgroundImage: `url(${Wiggle})` }} 
+              style={{ backgroundImage: `url(${images.Wiggle})` }} 
               className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
@@ -104,7 +96,7 @@ const Projects = () => {
           <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
             {/* Background Image (Darkened) */}
             <div 
-              style={{ backgroundImage: `url(${Suction})` }} 
+              style={{ backgroundImage: `url(${images.Suction})` }} 
               className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
@@ -124,7 +116,7 @@ const Projects = () => {
           <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
             {/* Background Image (Darkened) */}
             <div 
-              style={{ backgroundImage: `url(${Scorch})` }} 
+              style={{ backgroundImage: `url(${images.Scorch})` }} 
               className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
@@ -144,7 +136,7 @@ const Projects = () => {
           <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
             {/* Background Image (Darkened) */}
             <div 
-              style={{ backgroundImage: `url(${Discord})` }} 
+              style={{ backgroundImage: `url(${images.Discord})` }} 
               className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
@@ -161,7 +153,7 @@ const Projects = () => {
           <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
             {/* Background Image (Darkened) */}
             <div 
-              style={{ backgroundImage: `url(${Website})` }} 
+              style={{ backgroundImage: `url(${images.Website})` }} 
               className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
             ></div>
             {/* Content (Remains Bright) */}
