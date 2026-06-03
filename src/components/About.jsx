@@ -14,7 +14,8 @@ const About = ({images}) => {
             <p className='inline border-b-4 border-[#857d77]'>About</p>
             <br/><br/>
             <p className='text-[#d1c7a2] text-xl sm:text-3xl'>I've been working on software projects since 2019 and enjoy learning new tools & languages.
-                I am particularly good with the Gamemaker Studio 2 engine, but also like to branch out.</p>
+                I have experience with C#, C++, Python, Java, SQL, GML, and more. I enjoy making games of all sorts in my free time.
+            </p>
             <br/>
             <ul className='flex justify-center sm:justify-end gap-8 mt-4'>
                 <li className='w-[60px] h-[60px] flex justify-between items-center hover:scale-125 duration-300 bg-[#0A66C2] rounded-md'>

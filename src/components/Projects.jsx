@@ -8,6 +8,12 @@ const Projects = ({images}) => {
 
   const projects = [
     {
+      title: 'Musaic',
+      image: images.Music,
+      demo: 'https://wigglebot.itch.io/musaic',
+      code: 'https://github.com/Wigglebot37/Project-music',
+    },
+    {
       title: 'Quandary',
       image: images.Quandary,
       demo: 'https://wigglebot.itch.io/quandary/',
@@ -23,6 +29,11 @@ const Projects = ({images}) => {
       title: 'Substitute Reaper',
       image: images.Substitute,
       demo: 'https://wigglebot.itch.io/substitute-reaper/',
+    },
+    {
+      title: 'This Website',
+      image: images.Website,
+      code: 'https://github.com/Wigglebot37/WebPortfolio/',
     },
     {
       title: 'Project Wiggle',
@@ -47,17 +58,6 @@ const Projects = ({images}) => {
       image: images.Discord,
       code: 'https://github.com/Wigglebot37/Discord-Wiggle-Bot/',
     },
-    {
-      title: 'This Website',
-      image: images.Website,
-      code: 'https://github.com/Wigglebot37/WebPortfolio/',
-    },
-    {
-      title: 'Musaic',
-      image: images.Music,
-      demo: 'https://wigglebot.itch.io/musaic',
-      code: 'https://github.com/Wigglebot37/Project-music',
-    }
   ];
 
   return (
