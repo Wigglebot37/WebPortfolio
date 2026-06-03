@@ -52,6 +52,12 @@ const Projects = ({images}) => {
       image: images.Website,
       code: 'https://github.com/Wigglebot37/WebPortfolio/',
     },
+    {
+      title: 'Musaic',
+      image: images.Music,
+      demo: 'https://wigglebot.itch.io/musaic',
+      code: 'https://github.com/Wigglebot37/Project-music',
+    }
   ];
 
   return (
