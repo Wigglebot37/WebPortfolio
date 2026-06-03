@@ -47,7 +47,7 @@ const About = ({images}) => {
           </div>
         </div>
       </div>
-    );
-};
+    )
+}
 
 export default About

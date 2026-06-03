@@ -1,12 +1,64 @@
 import { useEffect } from 'react';
+import ProjectCard from './ProjectCard';
 
 const Projects = ({images}) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const projects = [
+    {
+      title: 'Quandary',
+      image: images.Quandary,
+      demo: 'https://wigglebot.itch.io/quandary/',
+      code: 'https://github.com/Wigglebot37/Quandary/',
+    },
+    {
+      title: 'Precinct 11',
+      image: images.Precinct,
+      demo: 'https://wigglebot.itch.io/precinct-11-pre-alpha-demo/',
+      code: 'https://github.com/Wigglebot37/Precinct-11/',
+    },
+    {
+      title: 'Substitute Reaper',
+      image: images.Substitute,
+      demo: 'https://wigglebot.itch.io/substitute-reaper/',
+    },
+    {
+      title: 'Project Wiggle',
+      image: images.Wiggle,
+      demo: 'https://wigglebot.itch.io/project-wiggle/',
+      code: 'https://github.com/Wigglebot37/Project-Wiggle/',
+    },
+    {
+      title: 'Suction Destruction',
+      image: images.Suction,
+      demo: 'https://wigglebot.itch.io/suction-destruction/',
+      code: 'https://github.com/Wigglebot37/harvest-project/',
+    },
+    {
+      title: 'Project Scorch',
+      image: images.Scorch,
+      demo: 'https://wigglebot.itch.io/project-scorch/',
+      code: 'https://github.com/Wigglebot37/Project-Scorch/',
+    },
+    {
+      title: 'Discord Bot',
+      image: images.Discord,
+      code: 'https://github.com/Wigglebot37/Discord-Wiggle-Bot/',
+    },
+    {
+      title: 'This Website',
+      image: images.Website,
+      code: 'https://github.com/Wigglebot37/WebPortfolio/',
+    },
+  ];
+
   return (
-    <div name='projects' className='w-full min-h-screen pb-24 bg-[#202729] text-[#AA644D] flex max-sm:flex-col items-center sm:justify-center pt-[120px] max-sm:pb-8 overflow-auto'>
+    <div 
+      name='projects' 
+      className='w-full min-h-screen pb-24 bg-[#202729] text-[#AA644D] flex max-sm:flex-col items-center sm:justify-center pt-[120px] max-sm:pb-8 overflow-auto'
+    >
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='pb-8'>
@@ -15,157 +67,15 @@ const Projects = ({images}) => {
         </div>
         {/* Project Container */}
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
-          {/* Project 1 */}
-          <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative'>
-            {/* Background Image (Darkened) */}
-            <div 
-              style={{ backgroundImage: `url(${images.Quandary})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
-            ></div>
-            {/* Content (Remains Bright) */}
-            <div className='relative text-center'>
-              <span className='text-2xl font-bold text-[#D1BFB0] tracking-wider underline' style={{ textShadow: '2px 2px 2px black' }}>Quandary</span>
-              <div className='pt-8'>
-                <a href='https://wigglebot.itch.io/quandary/' target='_blank' rel='noopener noreferrer'>
-                  <button className='text-center hover:scale-110 transition-transform duration-200 rounded-lg px-4 py-3 m-2 bg-[#D1BFB0] text-[#202729] font-bold text-lg'>Demo</button>
-                </a>
-                <a href='https://github.com/Wigglebot37/Quandary/' target='_blank' rel='noopener noreferrer'>
-                  <button className='text-center hover:scale-110 transition-transform duration-200 rounded-lg px-4 py-3 m-2 bg-[#D1BFB0] text-[#202729] font-bold text-lg'>Code</button>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Project 2 */}
-          <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
-            {/* Background Image (Darkened) */}
-            <div 
-              style={{ backgroundImage: `url(${images.Precinct})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
-            ></div>
-            {/* Content (Remains Bright) */}
-            <div className='relative text-center'>
-              <span className='text-2xl font-bold text-[#D1BFB0] tracking-wider underline' style={{ textShadow: '2px 2px 2px black' }}>Precinct 11</span>
-              <div className='pt-8'>
-                <a href='https://wigglebot.itch.io/precinct-11-pre-alpha-demo/' target='_blank' rel='noopener noreferrer'>
-                  <button className='text-center hover:scale-110 transition-transform duration-200 rounded-lg px-4 py-3 m-2 bg-[#D1BFB0] text-[#202729] font-bold text-lg'>Demo</button>
-                </a>
-                <a href='https://github.com/Wigglebot37/Precinct-11/' target='_blank' rel='noopener noreferrer'>
-                  <button className='text-center hover:scale-110 transition-transform duration-200 rounded-lg px-4 py-3 m-2 bg-[#D1BFB0] text-[#202729] font-bold text-lg'>Code</button>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Project 3 */}
-          <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
-            {/* Background Image (Darkened) */}
-            <div 
-              style={{ backgroundImage: `url(${images.Substitute})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
-            ></div>
-            {/* Content (Remains Bright) */}
-            <div className='relative text-center'>
-              <span className='text-2xl font-bold text-[#D1BFB0] tracking-wider underline' style={{ textShadow: '2px 2px 2px black' }}>Substitute Reaper</span>
-              <div className='pt-8'>
-                <a href='https://wigglebot.itch.io/substitute-reaper/' target='_blank' rel='noopener noreferrer'>
-                  <button className='text-center hover:scale-110 transition-transform duration-200 rounded-lg px-4 py-3 m-2 bg-[#D1BFB0] text-[#202729] font-bold text-lg'>Demo</button>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Project 4 */}
-          <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
-            {/* Background Image (Darkened) */}
-            <div 
-              style={{ backgroundImage: `url(${images.Wiggle})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
-            ></div>
-            {/* Content (Remains Bright) */}
-            <div className='relative text-center'>
-              <span className='text-2xl font-bold text-[#D1BFB0] tracking-wider underline' style={{ textShadow: '2px 2px 2px black' }}>Project Wiggle</span>
-              <div className='pt-8'>
-                <a href='https://wigglebot.itch.io/project-wiggle/' target='_blank' rel='noopener noreferrer'>
-                  <button className='text-center hover:scale-110 transition-transform duration-200 rounded-lg px-4 py-3 m-2 bg-[#D1BFB0] text-[#202729] font-bold text-lg'>Demo</button>
-                </a>
-                <a href='https://github.com/Wigglebot37/Project-Wiggle/' target='_blank' rel='noopener noreferrer'>
-                  <button className='text-center hover:scale-110 transition-transform duration-200 rounded-lg px-4 py-3 m-2 bg-[#D1BFB0] text-[#202729] font-bold text-lg'>Code</button>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Project 5 */}
-          <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
-            {/* Background Image (Darkened) */}
-            <div 
-              style={{ backgroundImage: `url(${images.Suction})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
-            ></div>
-            {/* Content (Remains Bright) */}
-            <div className='relative text-center'>
-              <span className='text-2xl font-bold text-[#D1BFB0] tracking-wider underline' style={{ textShadow: '2px 2px 2px black' }}>Suction Destruction</span>
-              <div className='pt-8'>
-                <a href='https://wigglebot.itch.io/suction-destruction/' target='_blank' rel='noopener noreferrer'>
-                  <button className='text-center hover:scale-110 transition-transform duration-200 rounded-lg px-4 py-3 m-2 bg-[#D1BFB0] text-[#202729] font-bold text-lg'>Demo</button>
-                </a>
-                <a href='https://github.com/Wigglebot37/harvest-project/' target='_blank' rel='noopener noreferrer'>
-                  <button className='text-center hover:scale-110 transition-transform duration-200 rounded-lg px-4 py-3 m-2 bg-[#D1BFB0] text-[#202729] font-bold text-lg'>Code</button>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Project 6 */}
-          <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
-            {/* Background Image (Darkened) */}
-            <div 
-              style={{ backgroundImage: `url(${images.Scorch})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
-            ></div>
-            {/* Content (Remains Bright) */}
-            <div className='relative text-center'>
-              <span className='text-2xl font-bold text-[#D1BFB0] tracking-wider underline' style={{ textShadow: '2px 2px 2px black' }}>Project Scorch</span>
-              <div className='pt-8'>
-                <a href='https://wigglebot.itch.io/project-scorch/' target='_blank' rel='noopener noreferrer'>
-                  <button className='text-center hover:scale-110 transition-transform duration-200 rounded-lg px-4 py-3 m-2 bg-[#D1BFB0] text-[#202729] font-bold text-lg'>Demo</button>
-                </a>
-                <a href='https://github.com/Wigglebot37/Project-Scorch/' target='_blank' rel='noopener noreferrer'>
-                  <button className='text-center hover:scale-110 transition-transform duration-200 rounded-lg px-4 py-3 m-2 bg-[#D1BFB0] text-[#202729] font-bold text-lg'>Code</button>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Project 7 */}
-          <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
-            {/* Background Image (Darkened) */}
-            <div 
-              style={{ backgroundImage: `url(${images.Discord})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
-            ></div>
-            {/* Content (Remains Bright) */}
-            <div className='relative text-center'>
-              <span className='text-2xl font-bold text-[#D1BFB0] tracking-wider underline' style={{ textShadow: '2px 2px 2px black' }}>Discord Bot</span>
-              <div className='pt-8'>
-                <a href='https://github.com/Wigglebot37/Discord-Wiggle-Bot/' target='_blank' rel='noopener noreferrer'>
-                  <button className='text-center hover:scale-110 transition-transform duration-200 rounded-lg px-4 py-3 m-2 bg-[#D1BFB0] text-[#202729] font-bold text-lg'>Code</button>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Project 8 */}
-          <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div relative overflow-hidden'>
-            {/* Background Image (Darkened) */}
-            <div 
-              style={{ backgroundImage: `url(${images.Website})` }} 
-              className='absolute inset-0 bg-cover bg-center brightness-[0.3]'
-            ></div>
-            {/* Content (Remains Bright) */}
-            <div className='relative text-center'>
-              <span className='text-2xl font-bold text-[#D1BFB0] tracking-wider underline' style={{ textShadow: '2px 2px 2px black' }}>This Website</span>
-              <div className='pt-8'>
-                <a href='https://github.com/Wigglebot37/WebPortfolio/' target='_blank' rel='noopener noreferrer'>
-                  <button className='text-center hover:scale-110 transition-transform duration-200 rounded-lg px-4 py-3 m-2 bg-[#D1BFB0] text-[#202729] font-bold text-lg'>Code</button>
-                </a>
-              </div>
-            </div>
-          </div>
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.title}
+              title={project.title}
+              image={project.image}
+              demo={project.demo}
+              code={project.code}
+            />
+          ))}
         </div>
       </div>
     </div>
